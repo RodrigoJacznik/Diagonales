@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Diagonales</string>
+    <string name="img_descriptor">Mapa de la plata</string>
+    <string name="calculate">Calcular</string>
+    <string name="street">Calle</string>
+    <string name="street_hint">44</string>
+    <string name="number">Número</string>
+    <string name="number_hint">508</string>
+    <string name="error">Datos invalidos. Ingrese una calle dentro del casco urbano</string>
+</resources>

@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/Base.Theme.AppCompat.Light"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="end"
+    tools:context="com.rodrigojacznik.diagonales.activities.MainActivity">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:contentDescription="@string/img_descriptor"
+        android:scaleType="centerCrop"
+        android:src="@drawable/laplata" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingTop="32dp"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:paddingBottom="8dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/street"
+            android:layout_weight="1"
+            style="@style/textPuntos"/>
+
+        <EditText
+            android:id="@+id/street"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:inputType="numberSigned"
+            android:layout_weight="3"
+            android:hint="@string/street_hint"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:paddingBottom="8dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/number"
+            android:layout_weight="1"
+            style="@style/textPuntos"/>
+        <EditText
+            android:id="@+id/number"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:inputType="numberSigned"
+            android:layout_weight="3"
+            android:hint="@string/number_hint"/>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:paddingBottom="32dp">
+
+        <Button
+            android:id="@+id/calculate"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="calculateStreet"
+            android:ems="10"
+            android:text="@string/calculate"/>
+
+        <TextView
+            android:id="@+id/result"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/calculate"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="8dp"
+            android:gravity="center"
+            android:textAlignment="center"
+            android:text="@string/error"
+            android:visibility="invisible" />
+    </RelativeLayout>
+
+</LinearLayout>
